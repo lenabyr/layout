@@ -1,0 +1,55 @@
+<!Doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>两列布局--居中</title>
+		<link rel="stylesheet" href="css/layout_4.css" />
+	</head>
+	<body>
+		<div id="container">
+			<div id="header">
+				<h3>Lenabyr-------两列布局之三（利用float实现）</h3>
+			</div>
+			<div id="article">
+				<div class="leftContent">
+					<div class="left">
+						<div class="content">
+							<h4>1、两列布局之三-----左侧自适应，右侧固定（不改变DOM位置，添加包裹层）</h4>
+							<p>这里实现的依然是两列布局右侧固定，左侧自适应，可是在这种方式中不改变DOM位置，只是在自适应的容器外面加一层标签，包裹着自适应层。详细描述如下：自适应层最外面设置width:100%+float，里面一层设置padding-left/margin-left撑开间距，固定层设置为width+float+margin负值。</p>
+							<p>其具体实现结构：<p>width:100%+float:left</p><p>padding-right/margin-right</p><p>width+float:left+margin负值。</p></p>
+						</div>
+						<div class="content">
+							<h4>2、知识点</h4>
+							<p>html文件的内容类型（ContentType）为“text/html”。DOCTYPE是document type(文档类型)的简写，DOCTYPE声明是html文件中必不可少的，它位于文件的第一行，此标签可告知浏览器文档使用哪种HTML或XHTML规范。</p>
+							<p>网页开发中，一般需判断浏览器类型，需通过userAgent中获取浏览器内核来判断。firefox是Gecko内核，Safari是webkit内核，一直到IE9都是Trident内核，chrome是Blink内核（基于webkit,由Google和Opera共同开发），Opera以前是presto内核，现在改用Chrome的Blink内核。</p>
+						</div>
+						<div class="content">
+							<h4>3、每日一学</h4>
+							<h5>垂直居中</h5>
+							<p>利用CSS进行元素的水平居中，比较简单，行级元素设置其父元素的text-align center，块级元素设置其本身的left和right的margin为auto即可。对于垂直居中则要有以下几种情况。</p>
+							<ol>
+								<li>垂直居中-父元素高度确定的单行文本：父元素高度确定的单行文本的竖直居中的方法是通过设置父元素的 height 和 line-height 高度一致来实现的</li>
+								<li>父元素高度确定的多行文本、图片、块状元素的竖直居中的方法有两种：（1）、使用插入 table (包括tbody、tr、td)标签，同时设置 vertical-align：middle。（2）、在 chrome、firefox 及 IE8 以上的浏览器下可以设置块级元素的 display 为 table-cell，激活 vertical-align 属性，但注意 IE6、7 并不支持这个样式。
+								</li>
+							</ol>
+							<p>具体实现请参考：<a href="http://vanseodesign.com/css/vertical-centering/" target="_blank">http://vanseodesign.com/css/vertical-centering/</a></p>
+						</div>
+					</div>
+				</div>
+				<div class="right">
+					<ul>
+						<li><a href="layout_1.html" target="_blank">单列居中布局</a></li>
+						<li><a href="layout_2.html" target="_blank">两列布局之一</a></li>
+						<li><a href="layout_3.html" target="_blank">两列布局之二</a></li>
+						<li><a href="javascript:void(0);">两列布局之三</a></li>
+						<li><a href="layout_5.html" target="_blank">两列布局之四</a></li>
+						<li><a href="layout_6.html" target="_blank">三列布局</a></li>
+					</ul>
+				</div>
+			</div>
+			<div id="footer">
+				<a href="https://github.com/lenabyr">转到我的GitHub</a>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,64 @@
+<!Doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>两列布局--居中</title>
+		<link rel="stylesheet" href="css/layout_5.css" />
+	</head>
+	<body>
+		<div id="container">
+			<div id="header">
+				<h3>Lenabyr-------两列布局之四（利用position实现）</h3>
+			</div>
+			<div id="article">
+				<div class="left">
+					<ul>
+						<li><a href="layout_1.html" target="_blank">单列居中布局</a></li>
+						<li><a href="layout_2.html" target="_blank">两列布局之一</a></li>
+						<li><a href="layout_3.html" target="_blank">两列布局之二</a></li>
+						<li><a href="layout_4.html" target="_blank">两列布局之三</a></li>
+						<li><a href="javascript:void(0);">两列布局之四</a></li>
+						<li><a href="layout_6.html" target="_blank">三列布局</a></li>
+					</ul>					
+				</div>
+				<div class="right">
+					<div class="content">
+						<h4>1、两列布局之四-----一侧自适应宽度，一侧固定宽度</h4>
+						<p>使用absolute实现横向两列布局相对于float要少，它常用于一列固定宽度，另一列宽度自适应的情况。此时要把父元素设置为相对定位relative，自适应宽度元素设置为绝对定位absolute，注意：<strong>要求固定宽度列的高度要大于自适应宽度的列,一旦固定宽度列宽度小于自适应宽度列就会溢出。</strong></p>
+					</div>
+					<div class="content">
+						<h4>2、相关知识点</h4>
+						<p>position属性拥有3种定位形式：静态定位、相对定位、绝对定位，position的属性值：static、relative、absolute、fixed;可实现横向多列布局和复杂定位布局(包括带有遮罩层效果的提示框、固定层效果、全屏广告等)。</p>
+						<p>相对定位：相对于自身原有位置进行偏移；仍处于标准文档流中；随即拥有偏移属性和z-index属性。如果想为元素设置层模型中的相对定位，需要设置position:relative（表示相对定位），它通过left、right、top、bottom属性确定元素在正常文档流中的偏移位置。相对定位完成的过程是首先按static(float)方式生成一个元素(并且元素像层一样浮动了起来)，然后相对于以前的位置移动，移动的方向和幅度由left、right、top、bottom属性确定，偏移前的位置保留不动。</p>
+						<p>绝对定位：建立了以包含块为基准的定位；完全脱离了标准文档流；随即拥有偏移属性和z-index属性。绝对定位：（相对于其父包含块进行绝对定位或者body进行绝对定位）
+						如果想为元素设置层模型中的绝对定位，需要设置position:absolute(表示绝对定位)，这条语句的作用将元素从文档流中拖出来，然后使用left、right、top、bottom属性相对于其最接近的一个具有定位属性的父包含块进行绝对定位。如果不存在这样的包含块，则相对于body元素，即相对于浏览器窗口。</p>
+						<p>固定定位（相对于浏览器视图窗口进行偏移）
+						fixed：表示固定定位，与absolute定位类型类似，但它的相对移动的坐标是视图（屏幕内的网页窗口）本身。由于视图本身是固定的，它不会随浏览器窗口的滚动条滚动而变化，除非你在屏幕中移动浏览器窗口的屏幕位置，或改变浏览器窗口的显示大小，因此固定定位的元素会始终位于浏览器窗口内视图的某个位置，不会受文档流动影响，这与background-attachment:fixed;属性功能相同。以下代码可以实现相对于浏览器视图向右移动100px，向下移动50px。并且拖动滚动条时位置固定不变。
+						</p>
+					</div>
+					<div class="content">
+						<h4>3、每日一学</h4>
+						<h5>为什么利用多个域名来存储网站资源会更有效?</h5>
+						<ol>
+							<li>CDN缓存更方便。</li>
+							<li>突破浏览器并发限制。</li>
+							<li>节约cookie带宽。</li>
+							<li>节约主域名的连接数，优化页面响应速度。</li>
+							<li>防止不必要的安全问题。</li>
+						</ol>
+						<h5>cookies，sessionStorage和localStorage的区别</h5>
+						<p>sessionStorage用于本地存储一个会话（session）中的数据，这些数据只有在同一个会话中的页面才能访问并且当会话结束后数据也随之销毁。因此sessionStorage不是一种持久化的本地存储，仅仅是会话级别的存储。而localStorage用于持久化的本地存储，除非主动删除数据，否则数据是永远不会过期的。</p>
+						<p>web storage和cookie的区别:</p>
+						<ol>
+							<li>Web Storage的概念和cookie相似，区别是它是为了更大容量存储设计的。Cookie的大小是受限的，并且每次你请求一个新的页面的时候Cookie都会被发送过去，这样无形中浪费了带宽，另外cookie还需要指定作用域，不可以跨域调用。</li>
+							<li>除此之外，Web Storage拥有setItem,getItem,removeItem,clear等方法，不像cookie需要前端开发者自己封装setCookie，getCookie。但是Cookie也是不可以或缺的：Cookie的作用是与服务器进行交互，作为HTTP规范的一部分而存在 ，而Web Storage仅仅是为了在本地“存储”数据而生。</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+			<div id="footer">
+				<a href="https://github.com/lenabyr">转到我的GitHub</a>
+			</div>
+		</div>
+	</body>
+</html>

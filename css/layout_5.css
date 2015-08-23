@@ -22,13 +22,12 @@ p,ol,ul,a{
 }
 #article{
 	margin:10px;
+	position:relative;
 }
 .left{
-	/*width:20%;*/
-	width:150px;
-	float:left;
+	width: 150px;
+	min-height: 1200px;
 }
-
 .left ul{
 	list-style: none;
 	margin: 10px;
@@ -54,9 +53,10 @@ a:hover{
 	color: #00f;
 }  */
 .right{
-	/*margin-left: 20%;*/
-	margin-left: 150px;
-	padding: 10px;
+	position: absolute;
+	left: 150px;
+	top:10px;
+	padding:0 10px 10px 10px;
 }
 .content{
 	margin:5px;
@@ -88,10 +88,15 @@ ol{
 li{
 	padding: 5px;
 }
+li code{
+	color:blue;
+	font-weight: bold;
+}
 #footer{
-  background: #000;
-  height: 30px;
-  padding: 5px 10px;
+	clear:both;
+  	background: #000;
+ 	height: 30px;
+  	padding: 5px 10px;
 }
 #footer a:link{
 	line-height: 30px;

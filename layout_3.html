@@ -1,0 +1,53 @@
+<!Doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>两列布局--居中</title>
+		<link rel="stylesheet" href="css/layout_3.css" />
+	</head>
+	<body>
+		<div id="container">
+			<div id="header">
+				<h3>Lenabyr-------两列布局之二（利用float实现）</h3>
+			</div>
+			<div id="article">
+				<div class="right">
+					<ul>
+						<li><a href="layout_1.html" target="_blank">单列居中布局</a></li>
+						<li><a href="layout_2.html" target="_blank">两列布局之一</a></li>
+						<li><a href="javascript:void(0);">两列布局之二</a></li>
+						<li><a href="layout_4.html" target="_blank">两列布局之三</a></li>
+						<li><a href="layout_5.html" target="_blank">两列布局之四</a></li>
+						<li><a href="layout_6.html" target="_blank">三列布局</a></li>
+					</ul>					
+				</div>
+				<div class="left">
+					<div class="content">
+						<h4>1、两列布局之二-----左侧自适应，右侧固定（改变DOM位置）</h4>
+						<p>这里实现的两列布局是右侧固定，左侧自适应，可是使用与上一中类似的布局方式，基本结构：width+float；padding-right/margin-right，但是这里需要改变DOM位置（相互交换）。</p>
+					</div>
+					<div class="content">
+						<h4>2、相关知识点</h4>
+						<p>文档对象模型（DOM）是针对XML但经过扩展用于HTML的应用程序编程接口（API）。文档对象模型DOM（Document Object Model）定义访问和处理HTML文档的标准方法。DOM 将HTML文档呈现为带有元素、属性和文本的树结构（节点树）。</p>
+						<p>文档节点是每个文档的根节点，文档节点只有一个子节点，即html元素，也称为文档元素，文档元素是文档的最外层元素，每个文档只能有一个文档元素。</p>
+						<p>HTML文档可以说由节点构成的集合，三种常见的DOM节点:元素节点、属性节点、文本节点。</p>
+					</div>
+					<div class="content">
+						<h4>3、每日一学</h4>
+						<h5>不定宽度的块状元素的居中方法</h5>
+						<ol>
+							<li>加入 table 标签。为需要设置的居中的元素外面加入一个 table 标签(包括 &lt;tbody&gt;、&lt;tr&gt;、&lt;td&gt;)，为这个table设置“左右 margin 居中”（这个和定宽块状元素的方法一样）。</li>
+							<li>设置 display:inline 方法。改变块级元素的dispaly为inline 类型，然后使用<code>text-align:center;</code>来实现居中效果。</li>
+							<li>设置position:relative和left:50%方法。通过给父元素设置 float，然后给父元素设置<code>position:relative;left:50%;</code>，子元素设置<code>position:relative;left:-50%;</code>来实现水平居中。</li>
+						</ol>
+						<h5>隐性改变display类型</h5>
+						<p>不论之前是什么类型元素，display:none 除外，但是当为元素设置以下 2 个句之一:position:absolute、float:left或float:right时，元素会自动变为以display:inline-block 的方式显示，当然就可以设置元素的width和height了且默认宽度不占满父元素。</p>
+					</div>
+				</div>
+			</div>
+			<div id="footer">
+				<a href="https://github.com/lenabyr">转到我的GitHub</a>
+			</div>
+		</div>
+	</body>
+</html>

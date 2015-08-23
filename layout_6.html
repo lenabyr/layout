@@ -1,0 +1,77 @@
+<!Doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>三列布局--居中</title>
+		<link rel="stylesheet" href="css/layout_6.css" />
+	</head>
+	<body>
+		<div id="container">
+			<div id="header">
+				<h3>Lenabyr-------三列布局（利用position实现）</h3>
+			</div>
+			<div id="article">
+				<div class="middle">
+					<div class="content">
+						<h4>1、三列布局-----中间自适应，左右侧固定</h4>
+						<p>三列布局特点：有一个自适应宽度的中间列与固定的宽度左右列，中间列的主要内容首先出现在网页中，可以允许任一个列的内容为最高。这里用position实现。<strong>还可以使用float来实现，这里没有demo，可以根据实际应用去实现。</strong></p>
+					</div>
+					<div class="content">
+						<h4>2、每日一学</h4>
+						<h5>什么是Css Hack？ie6,7,8的hack分别是什么？</h5>
+						<p>针对不同的浏览器写不同的CSS code的过程，就是CSS hack.</p>
+						<h5>src与href的区别</h5>
+						<p>src用于替换当前元素，href用于在当前文档和引用资源之间确立联系。
+						src是source的缩写，指向外部资源的位置，指向的内容将会嵌入到文档中当前标签所在位置；在请求src资源时会将其指向的资源下载并应用到文档内，例如js脚本，img图片和frame等元素。<code>&lt;script src ="js.js"&gt;&lt;/script&gt;</code>当浏览器解析到该元素时，会暂停其他资源的下载和处理，直到将该资源加载、编译、执行完毕，图片和框架等元素也如此，类似于将所指向资源嵌入当前标签内。这也是为什么将js脚本放在底部而不是头部。
+						href是Hypertext Reference的缩写，指向网络资源所在位置，建立和当前元素（锚点）或当前文档（链接）之间的链接，如果我们在文档中添加<code>&lt;link href="common.css" rel="stylesheet"/&gt;</code>
+						那么浏览器会识别该文档为css文件，就会并行下载资源并且不会停止对当前文档的处理。这也是为什么建议使用link方式来加载css，而不是使用@import方式。</p>
+						<h5>一个页面上有大量的图片（大型电商网站），加载很慢，有哪些方法优化这些图片的加载，给用户更好的体验</h5>
+						<ol>
+							<li>图片懒加载，在页面上的未可视区域可以添加一个滚动条事件，判断图片位置与浏览器顶端的距离与页面的距离，如果前者小于后者，优先加载.</li>
+							<li>如果为幻灯片、相册等，可以使用图片预加载技术，将当前展示图片的前一张和后一张优先下载.</li>
+							<li>如果图片为css图片，可以使用CSSsprite，SVGsprite，Iconfont、Base64等技术.</li>
+							<li>如果图片过大，可以使用特殊编码的图片，加载时会先加载一张压缩的特别厉害的缩略图，以提高用户体验</li>
+							<li>如果图片展示区域小于图片的真实大小，则因在服务器端根据业务需要先行进行图片压缩，图片压缩后大小与展示一致</li>
+						</ol>
+						<h5>有哪项方式可以对一个DOM设置它的CSS样式</h5>
+						<ol>
+							<li>外部样式表，引入一个外部css文件</li>
+							<li>内部样式表，将css代码放在&lt;head&gt;标签内部</li>
+							<li>内联样式，将css样式直接定义在 HTML 元素内部</li>
+						</ol>
+						<h5>CSS都有哪些选择器</h5>
+						<ol>
+							<li>派生选择器（用HTML标签申明）</li>
+							<li>id选择器（用DOM的ID申明）</li>
+							<li>类选择器（用一个样式类名申明）</li>
+							<li>属性选择器（用DOM的属性申明，属于CSS2，IE6不支持）</li>
+							<li>后代选择器（利用空格间隔，比如div .a{  }）</li>
+							<li>群组选择器（利用逗号间隔，比如p,div,#a{  }）</li>
+						</ol>
+					</div>
+				</div>				
+				<div class="left">
+					<ul>
+						<li><a href="layout_1.html" target="_blank">单列居中布局</a></li>
+						<li><a href="layout_2.html" target="_blank">两列布局之一</a></li>
+						<li><a href="layout_3.html" target="_blank">两列布局之二</a></li>
+						<li><a href="layout_4.html" target="_blank">两列布局之三</a></li>
+						<li><a href="layout_5.html" target="_blank">两列布局之四</a></li>
+						<li><a href="javascript:void(0);">三列布局</a></li>
+					</ul>					
+				</div>
+				<div class="right">
+					<h5>登鹳雀楼</h5>
+					<p>白日依山尽，</p>
+					<p>黄河入海流。</p>
+					<p>欲穷千里目，</p>
+					<p>更上一层楼。</p>
+				</div>
+
+			</div>
+			<div id="footer">
+				<a href="https://github.com/lenabyr">转到我的GitHub</a>
+			</div>
+		</div>
+	</body>
+</html>

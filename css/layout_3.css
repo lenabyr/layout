@@ -1,0 +1,105 @@
+*{margin:0;padding:0;}
+body{
+	background: #ccc;
+	font-family: "MicroSoft Yahei";
+	line-height: 1.5;
+}
+p,ol,ul,a{
+	font-size:14px;
+}
+#container{
+	width:80%;
+	margin:0 auto;
+	background: #fff;
+}
+#header{
+	background: #000;
+}
+#header h3{
+	line-height:40px;
+	padding:10px 20px;
+	color: #fff;
+}
+#article{
+	margin:10px;
+}
+.right{
+	float: right;
+	width: 150px;
+}
+.right ul{
+	list-style: none;
+	margin: 10px;
+}
+.right ul li{
+	padding:10px;
+	border-bottom: 1px solid #00f;
+  	border-left: 1px solid #00f;
+  	background: #fff;
+}
+a:link{
+	text-decoration: none;
+	color: black;
+}
+/*  a:visited{
+	color: magenta;
+} */
+a:hover{
+	color: blue;
+	text-decoration: underline;
+}
+/* a:active{
+	color: #00f;
+}  */
+.left{
+	margin-right: 160px;
+	padding: 10px;
+}
+.content{
+	margin:5px;
+	padding:10px;
+}
+.content h4{
+	padding:0 0 10px 5px;
+	color: blue; 
+}
+.content p{
+	padding:0 10px 10px 10px;
+	text-indent: 2em;
+}
+.content p strong{
+	color:red;
+}
+.content p code{
+	color:blue;
+	font-weight: bold;
+}
+.content h5{
+	padding:10px 10px;
+	color: #111;
+}
+ol{
+	margin: 0 20px;
+	padding: 0 20px 10px;
+}
+li{
+	padding: 5px;
+}
+li code{
+	color:blue;
+	font-weight: bold;
+}
+#footer{
+  background: #000;
+  height: 30px;
+  padding: 5px 10px;
+}
+#footer a:link{
+	line-height: 30px;
+	margin: 0 0 0 45%;
+	color: grey;
+	text-decoration: none;
+}
+#footer a:hover{
+	color: #fff;
+}
